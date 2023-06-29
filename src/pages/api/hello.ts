@@ -3,10 +3,12 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
     name: string
+    timestamp: Date
 }
 export default function handler(
     req:NextApiRequest,
     res: NextApiResponse<Data>
 ){
-    res.status(200).json({name: 'John Doe'})
+    const timestamps = new Date()
+    res.status(200).json({name: 'John Doe',timestamp: timestamps})
 }
