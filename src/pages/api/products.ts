@@ -1,10 +1,9 @@
-import { NextApiRequest } from "next";
-import { NextResponse } from "next/server";
+import { NextApiRequest,NextApiResponse } from "next";
 import products from '../../../database.json'
 
 export default function handler(
     req:NextApiRequest,
-    res:NextResponse
+    res:NextApiResponse
 ){
     res.status(200).json(products)
 }

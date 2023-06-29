@@ -1,10 +1,10 @@
-import { NextApiRequest } from "next";
-import { NextResponse } from "next/server";
+import { NextApiRequest,NextApiResponse } from "next";
+
 import products from '../../../../database.json'
 
 export default function handler(
     req:NextApiRequest,
-    res:NextResponse
+    res:NextApiResponse
 ){
     const { id } = req.query
     const produc = products.find(prod => prod.id ===Number(id))
