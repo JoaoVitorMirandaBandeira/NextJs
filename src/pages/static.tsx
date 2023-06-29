@@ -17,6 +17,7 @@ export const getStaticProps: GetStaticProps =async () => {
     }
 }
 
+
 const Static : NextPage = (props:{
     children?: ReactNode,
     staticData?: ApiResponse
